@@ -1,0 +1,154 @@
+/* Minification failed. Returning unminified contents.
+(149,12): run-time error CSS1036: Expected expression, found ';'
+ */
+/* NUGET: BEGIN LICENSE TEXT
+ *
+ * Microsoft grants you the right to use these script files for the sole
+ * purpose of either: (i) interacting through your browser with the Microsoft
+ * website or online service, subject to the applicable licensing or use
+ * terms; or (ii) using the files as included with a Microsoft product subject
+ * to that product's license terms. Microsoft reserves all other rights to the
+ * files not expressly granted by Microsoft, whether by implication, estoppel
+ * or otherwise. The notices and licenses below are for informational purposes only.
+ *
+ * NUGET: END LICENSE TEXT */
+/*!
+ * Bootstrap v3.0.0
+ *
+ * Copyright 2013 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Designed and built with all the love in the world by @mdo and @fat. */
+
+
+body {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 1000px;
+    /*background:radial-gradient(white,gray);*/
+    background: url('Images/BTP_7477.jpg');
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.navbar-default {
+    /*background-color: #170E98;*/
+    background:linear-gradient(#5294c4, #170E98);
+    border-color: #e7e7e7;
+    height:80px;
+}
+
+.navbar-brand {
+    padding: 5px;
+    height: 69px;
+}
+
+ul.nav {
+    font-size:larger;
+    padding-top:18px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: #F7FF88;
+}
+
+.navbar-nav > li > a {
+  padding-top: 9px !important;
+  padding-bottom: 0px;
+  color: #e5b140;
+  height: 40px;
+  margin: 0;
+  line-height: 20px;
+  text-shadow: none !important; }
+  .navbar-nav > li > a:hover {
+    background-color: #e5b132 !important;
+    color: blue; }
+
+/*#top {
+    background-color: #d2cdc5;
+    height: 60px;
+}
+#top img {
+    position:
+}*/
+
+#finishButtons {
+    float:right;
+}
+
+#searchForm {
+    float:left;
+}
+
+.dl-horizontal dt{
+    text-align: left;
+    width: 130px;
+    padding-right: 1em;
+}
+
+.dl-horizontal dd{
+    margin-left: 0;
+}
+
+a,a:hover,a:focus {
+    color: mediumblue;
+}
+
+.breadcrumb > .active {
+    color: black;
+}
+
+.breadcrumb {
+    padding: 8px 15px;
+    margin-bottom: 20px;
+    list-style: none;
+    background-color: transparent;
+    border-radius: 4px;
+    color: white;
+}
