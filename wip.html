@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CreateCustomHardware</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" />
+        <meta name="keywords" />
+        <link href="" rel="stylesheet"/>
+        <script src=""></script>
+    </head>
+    <body>
+        <div id="top">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#lhw-navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="/" id="lhw-logo">
+                            <img alt="Larson Hardware" src="">
+                        </a>
+                    </div>
+                    <div class="navbar-collapse collapse" id="lhw-navbar-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="">Home</a></li>
+                            <li><a href="">Contact</a></li>
+                            <li><a href="">Search</a></li>
+                            <li><a href="">Custom Hardware</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="" id="registerLink">Register</a></li>
+                            <li><a href="" id="loginLink">Log in</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- class="container-fluid" -->
+            </nav>
+        </div>
+        <div class="container body-content" style="background: radial-gradient(white,gray);">
+            <div class="row">
+                <div class="col-md-3">
+					<h3>Products</h3>
+					<div id="product Categories" style="font-size:smaller">
+						<a href="/Products/staples.html">Staples</a> <br />
+						<a href="/Products/eyeboltMT.html">Eyebolts - Machine Thread</a> <br />
+						<a href="/Products/eyeboltLT.html">Eyebolts - Lag Thread</a> <br />
+						<a href="/Products/ubolts.html">U-Bolts</a> <br />
+						<a href="/Products/cupshouldH.html">Cup/Shoulder Hooks</a> <br />
+						<a href="/Products/shooks.html">S-Hooks</a> <br />
+						<a href="/Products/jbolts.html">J-Bolts &amp; Hook Bolts</a> <br />
+						<a href="/Products/turnbuck.html">Turnbuckles</a> <br />
+						<a href="/Products/screwhSQ.html">Screw Hooks - Square Bend</a> <br />
+						<a href="/Products/screwhCE.html">Screw Hooks - Ceiling Type</a> <br />
+						<a href="/Products/screwhMS.html">Screw Hooks - Mics.</a> <br />
+						<a href="/Products/screweye.html">Screw Eyes</a> <br />
+						<a href="/Products/assort.html">Panel/Retail Assortments</a> <br />
+						<a href="/Products/utilho.html">Utility Hooks</a> <br />
+						<a href="/Products/ropehard.html">Door &amp; Misc. Home Hardware</a> <br />
+						<a href="/Products/mouldho.html">Moulding Hooks &amp; Hangers</a> <br />
+						<a href="/Products/otherho.html">Other Hooks</a> <br />
+						<a href="/Products/gatehook.html">Gate Hooks &amp; Eyes</a> <br />
+						<a href="/Products/ropehard.html">Rope Hardware</a> <br />
+						<a href="/Products/sawhorse.html">Saw Horse Brackets</a> <br />
+						<a href="/Products/corrigate.html">Corrugated Fasteners</a> <br />
+						<a href="/Products/dowel.html">Dowel Screws &amp; Hanger Bolts</a> <br />
+						<a href="/Products/cornice.html">Cornice &amp; Curtain Rod Hooks</a> <br />
+						<a href="/Products/turnbutt.html">Turnbuttons</a> <br />
+						<a href="/Products/convex.html">Convex Hooks</a> <br />
+					</div>
+                </div>
+                <div class="col-md-9">
+                    <h4>Create Custom Hardware</h4>
+                    <form action="/Custom/SubmitCustomHardware" method="post">    
+                        <div style="background-color:white;">
+                        <div class="container">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <h6>Choose the style of wire hardware you want to create:</h6>
+                                <input type="radio" name="HardwareType" value="Staple" id="staple" /><label for="hardwareType_staple">Staple</label><br />
+                                <input type="radio" name="HardwareType" value="S-Hhook" id="shook" /><label for="hardwareType_shook">S-Hook</label><br />
+                                <input type="radio" name="HardwareType" value="Hook, Eye, J-Bolt or U-Bolt" id="hook" /><label for="hardwareType_hook">Hook, Eye, J-Bolt or U-Bolt</label><br />
+                                <input type="radio" name="HardwareType" value="Screw Hook, Screw Eye" id="screwhook" /><label for="hardwareType_screwhook">Screw Hook or Screw Eye</label><br />
+                            </div>
+                            <div class="col-md-3"></div>
+                        </div>
+                        <div class="container" id="div_staple_point" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="col-md-3">
+                                <img src="" width="81" height="65" />
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Choose type of tip:</h6>
+                                <div class="row">
+                                    <div class="col-xs-9 col-md-3">
+                                        <div class="thumbnail" style="text-align: center;">
+                                            <div style="margin:auto">
+                                                <img src="" width="42" height="75" />
+                                            </div>
+                                            <div style="height:4em;">
+                                                <h6>Cut Point</h6><input type="radio" name="StapleTipType" value="Cut Point" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9 col-md-3">
+                                        <div class="thumbnail" style="text-align: center;">
+                                            <div>
+                                                <img src="" width="42" height="75" style="margin:auto" />
+                                            </div>
+                                            <div style="height:4em; text-align:center;">
+                                                <h6>Rolled Diamond</h6><input type="radio" name="StapleTipType" value="Rolled Diamond" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xs-9 col-md-3">
+                                        <div class="thumbnail" style="text-align: center;">
+                                            <div>
+                                                <img src="" width="42" height="75" style="margin:auto" />
+                                            </div>
+                                            <div style="height:4em; text-align:center;">
+                                                <h6>Oval Tip</h6><input type="radio" name="StapleTipType" value="Oval Tip" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                            </div>
+                        </div>
+                        <div class="container" id="div_shook" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="row">
+                                        <div class="col-xs-9 col-md-6">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="116" height="109" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="SHookType" value="Open S-Hook" id="openshook" /> Open S-Hook
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-9 col-md-6">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="116" height="109" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="SHookType" value="Closed S-Hook" id="closedshook" /> Closed S-Hook
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                </div>
+                            </div>
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Application (end use):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input style="width:90em" type="text" name="ApplicationUse" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Overall Length(L):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="OverallLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Diameter(D):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="WireDiameter" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Width(B):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookWidthB" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Width(C):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookWidthC" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Gap(E):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookGapE" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Gap(G):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookGapG" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire:</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="Wire" value="Steel" /> Steel<br />
+                                    <input type="radio" name="Wire" value="Brass" /> Brass<br />
+                                    <input type="radio" name="Wire" value="Phosphor Bronze" /> Phosphor Bronze<br />
+                                    <input type="radio" name="Wire" value="Stainless Steel" /> Stainless Steel<br />
+                                    <input type="radio" name="Wire" value="Other" /> Other:
+                                    <input type="text" name="Wire" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" id="div_hook" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="HookType" value="Hook Bolt, Right Angle Bend" /> Hook Bolt, Right Angle Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="HookType" value="Hook Bolt, Special" /> Hook Bolt, Special
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="HookType" value="Hook Bolt, Square Bend" /> Hook Bolt, Square Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="J Bolt" /> J Bolt
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="Hook Bolt" /> Hook Bolt
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="U Bolt, Square Bend" /> U Bolt, Square Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="U Bolt Round Bend" /> U Bolt Round Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="Eye Bolt Open" /> Eye Bolt Open
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="HookType" value="Eye Bolt Closed" /> Eye Bolt Closed
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                            </div>
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Application (end use):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input style="width:90em" type="text" name="ApplicationUse" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Overall Length(L):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="OverallLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Diameter(D):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="WireDiameter" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Dimension(A):</p>
+                                </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="Dimension" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Hook Width(C):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="HookWidthC" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Thread Length(T):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="ThreadLength" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Thread Size:</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="ThreadSize" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Thread:</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="radio" name="Thread" value="Right Hand Thread" /> Right Hand Thread
+                                        <input type="radio" name="Thread" value="Left Hand Thread" /> Left Hand Thread
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Hook Gap(E):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="HookGapE" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Hook Angle(B):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="HookAngle" value="" /> (Degrees)</p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Hook Length(N):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="HookLength" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Shank Length(M):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input type="text" name="ShankLength" value="" /></p>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Wire:</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="radio" name="Wire" value="Steel" /> Steel<br />
+                                        <input type="radio" name="Wire" value="Brass" /> Brass<br />
+                                        <input type="radio" name="Wire" value="Phosphor Bronze" /> Phosphor Bronze<br />
+                                        <input type="radio" name="Wire" value="Stainless Steel" /> Stainless Steel<br />
+                                        <input type="radio" name="Wire" value="Other" /> Other:
+                                        <input type="text" name="Wire" value="" />
+                                    </div>
+                                </div>
+                        </div>
+                        <div class="container" id="div_screwhook" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="ScrewHook" value="Screw Hook, Square Bend" /> Screw Hook, Square Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="ScrewHook" value="Screw Hook, Special" /> Screw Hook, Special
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:3em;">
+                                                    <input type="radio" name="ScrewHook" value="Screw Hook, Square Hook" /> Screw Hook, Square Hook
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="ScrewHook" value="Screw Hook, Round Bend" /> Screw Hook, Round Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="ScrewHook" value="Round Screw Hook" /> Round Screw Hook                                                    
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="ScrewHook" value="Open Screw Eye" /> Open Screw Eye
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height:2em;">
+                                                    <input type="radio" name="ScrewHook" value="Screw Eye" /> Screw Eye
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-1">
+                                </div>
+                            </div>
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Application (end use):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input style="width:90em" type="text" name="ApplicationUse" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Overall Length(L):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="OverallLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Diameter(D):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="WireDiameter" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Width(C):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookWidthC" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Thread Length(T):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="ThreadLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div lass="row">
+                                <div class="col-md-3">
+                                    <p>Hook Gap(E):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookGapE" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Angle(B):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookAngle" value="" /> (Degrees)</p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Length(N):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Shank Length(M):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="ShankLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire:</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="Wire" value="Steel" /> Steel<br />
+                                    <input type="radio" name="Wire" value="Brass" /> Brass<br />
+                                    <input type="radio" name="Wire" value="Phosphor Bronze" /> Phosphor Bronze<br />
+                                    <input type="radio" name="Wire" value="Stainless Steel" /> Stainless Steel<br />
+                                    <input type="radio" name="Wire" value="Other" /> Other:
+                                    <input type="text" name="Wire" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" id="div_staple_dimensions" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Application (end use):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input style="width:90em" type="text" name="ApplicationUse" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Overall Length(L):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="OverallLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Inside Width(C):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="InsideWidth" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Size(D):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="WireSize" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Shape:</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="WireShape" value="Round" />Round <input type="radio" name="WireShape" value="Square" />Square
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" id="div_staple_cleat" style="display:none; font-size:small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Cleat:</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="CleatType" value="Uncleated" /> Uncleated
+                                    <input type="radio" name="CleatType" value="Annular Thread" /> Annular Thread
+                                    <input type="radio" name="CleatType" value="Deep" /> Deep
+                                </div>
+                            </div>
+                        </div>
+                            <div class="container" id="div_staple_finish" style="display:none; font-size:small">
+                                <hr style="border-bottom:double;" />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h6>Finish:</h6>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Plain" /> Plain<br />
+                                                    <input type="radio" name="Finish" value="Galvanized" /> Galvanized<br />
+                                                    <input type="radio" name="Finish" value="Stainless Steel" /> Stainless Steel<br />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Zinc" /> Zinc<br />
+                                                    <input type="radio" name="Finish" value="Mill Galvanized" /> Mill Galvanized<br />
+                                                    <input type="radio" name="Finish" value="Copper Clad" /> Copper Clad<br />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Other" /> Other:
+                                                    <input type="text" id="finish_other" name="FinishOther" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="container" id="div_other_finish" style="display:none; font-size:small">
+                                <hr style="border-bottom:double;" />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <h6>Finish:</h6>
+                                        </div>
+                                        <div class="col-md-9">
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Plain" /> Plain<br />
+                                                    <input type="radio" name="Finish" value="Galvanized" /> Galvanized<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Yellow Dichromate" /> Zinc, Yellow Dichromate<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Olive Drab Dichromate" /> Zinc, Olive Drab Dichromate<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Red Dye" /> Zinc, Red Dye<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Black Oxide" /> Zinc, Black Oxide<br />
+                                                    <input type="radio" name="Finish" value="Nickel" /> Nickel<br />
+                                                    <input type="radio" name="Finish" value="Plastic Coating" /> Plastic Coating<br />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Zinc" /> Zinc<br />
+                                                    <input type="radio" name="Finish" value="Mill Galvanized" /> Mill Galvanized<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Black Dichromate" /> Zinc, Black Dichromate<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Yellow Dye" /> Zinc, Yellow Dye<br />
+                                                    <input type="radio" name="Finish" value="Zinc, Blue Dye" /> Zinc, Blue Dye<br />
+                                                    <input type="radio" name="Finish" value="Phosphate and Oil" /> Phosphate and Oil<br />
+                                                    <input type="radio" name="Finish" value="Clean and Laquer" /> Clean and Laquer<br />
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <input type="radio" name="Finish" value="Other" /> Other:
+                                                    <input type="text" id="finish_other" name="FinishOther" value="" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="container" id="quantity" style="display:none; font-size:small">
+                                <hr style="border-bottom:double;" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Quantity:</h6>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" id="quantity" name="Quantity" value="" /><br />
+                                        <input type="radio" name="QuantityPackage" value="LBS." />Lbs. <input type="radio" name="QuantityPackage" value="PCS." />Pcs.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container" id="bulkpack" style="display:none; font-size:small">
+                                <hr style="border-bottom:double;" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <h6>Bulk Pack:</h6>
+                                        <br />
+                                        <h6>Notes, Tolerances and Other Specifications:</h6>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <input type="text" id="bulkpackqty" name="BulkQuantity" value="" /><br />
+                                        <input type="radio" name="BulkPackage" value="LBS." />Lbs. per keg <input type="radio" name="BulkPackage" value="PCS." />Pcs. per keg
+                                        <br />
+                                        <textarea rows="5" cols="80"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container" id="bulkpack" style="display:none; font-size:small">
+                                <hr style="border-bottom:double;" />
+                                <div class="row">
+                                    <div class="col-md-5">
+                                    </div>
+                                    <div class="col-md-2">
+                                        <button type="submit" class="btn-xs" name="submitCustom" value="submitCustom" id="submitCustom" disabled title="Log in to submit order!" style="width:120px; align-self:center;">Submit</button>
+                                        <br />
+                                        <br />
+                                    </div>
+                                    <div class="col-md-5">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <script src=""></script>
+                    <script>
+                        var hardwareTypeSelect = function () {
+                            // hide all first
+                            $("[id^='div_']").hide();
+                            $("[id='bulkpack']").hide();
+                            $("[id='staple_dimensions']").hide();
+                            $("[id='cleat']").hide();
+                            $("[id='quantity']").hide();
+                            $("[id='finish_staples']").hide();
+                            $("[id='div_other_finish']").hide();
+
+                            var button = $(this);
+                            var value = button.attr('id');
+                            //var divId = "#div_" + value;
+                            var divId = "[id^='div_" + value + "']";
+                                $(divId).show();
+
+                            if (value != 'staple')
+                                $("[id='div_other_finish']").show();
+                                $("[id='bulkpack']").show();
+                                //$("[id='staple_dimensions']").show();
+                                //$("[id='cleat']").show();
+                                $("[id='quantity']").show();
+                                //$("[id='finish_staples']").show();
+                        };
+                        $("input[name='HardwareType']").on('click', hardwareTypeSelect);
+                    </script>
+                </div>
+            </div>
+        <footer>
+            <div class="container">
+                <div class="col-md-4">
+                    <p>&copy; 2020 - All Rights Reserved</p>
+                </div>
+                <div class="col-md-4">
+                    <p style="text-align:center">
+                        Larson Hardware Manufacturing Co.<br />
+                        P.O. Box E - Sterling, IL 61081
+                    </p>
+                </div>
+                <div class="col-md-4">
+                    <p>
+                        <span class="pull-right">
+                            P: (815) 625-0503<br />
+                            F: (815) 625-8786
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </footer>
+        <script src=""></script>
+        <script src=""></script>
+    </body>
+</html>
