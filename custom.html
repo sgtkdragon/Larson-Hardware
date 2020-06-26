@@ -95,10 +95,181 @@
                                     <div class="col-me-3">
                                         <img src="" width="81" height="65" />
                                     </div>
+                                    <div class="col-md-6">
+                                        <h6>Choose type of tip:</h6>
+                                        <div class="row">
+                                            <div class="col-xs-9 col-md-3">
+                                                <div class="thumbnail" style="text-align: center;">
+                                                    <div style="margin:auto;">
+                                                        <img src="" width="42" height="75" />
+                                                    </div>
+                                                    <div style="height: 4em;">
+                                                        <h6>Cut Point</h6>
+                                                        <input type="radio" name="StapleTipType" value="Cut Point" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-9 col-md-3">
+                                                <div class="thumbnail" style="text-align: center;">
+                                                    <div>
+                                                        <img src="" width="42" height="75" style="margin:auto" />
+                                                    </div>
+                                                    <div style="height: 4em; text-align: center;">
+                                                        <h6> Rolled Diamond</h6>
+                                                        <input type="radio" name="StapleTipType" value="Rolled Diamond" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-9 col-md-3">
+                                                <div class="thumbnail" style="text-align: center;">
+                                                    <div>
+                                                        <img src="" width="42" height="75" style="margin: auto;" />
+                                                    </div>
+                                                    <div style="height: 4em; text-align: center;">
+                                                        <h6>Oval Tip</h6>
+                                                        <input type="radio" name="StapleTipType" value="Oval Tip" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                                <div class="container" id="div_shook" style="display:none; font-size:small">
+                                    <hr style="border-bottom: double;" />
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="row">
+                                                <div class="thumbnail" style="text-align: center;">
+                                                    <div style="margin: auto">
+                                                        <img src="" width="116" height="109" />
+                                                    </div>
+                                                    <div style="height: 2em;">
+                                                        <input type="radio" name="SHookType" value="Open S-Hook" id="openshook" /> Open S-Hook
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-9 col-md-6">
+                                                <div class="thrmbnail" style="text-align: center;">
+                                                    <div style="margin: auto">
+                                                        <img src="" width="116" height="109" />
+                                                    </div>
+                                                    <div style="height:2em;">
+                                                        <input type="radio" name="SHookType" value="Closed S-Hook" id="closedshook" /> Closed S-Hook
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                    </div>
+                                </div>
+                                <hr sytle="border-bottom:double;" />
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <p>Application (End Use):</p>
+                                    </div>
+                                    <div class="col-md-9">
+                                        <p><input style="width: 90em;" type="text" name="ApplicationUse" value="" /></p>
+                                    </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Overall Length(L):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="OverallLength" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire Diameter(D):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="WireDiameter" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Width(B):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookWidthB" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Width(C):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookWidthC" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Gap(E):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookGapE" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Hook Gap(G):</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <p><input type="text" name="HookGapG" value="" /></p>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <p>Wire:</p>
+                                </div>
+                                <div class="col-md-9">
+                                    <input type="radio" name="Wire" value="Steel" /> Steel<br />
+                                    <input type="radio" name="Wire" value="Brass" /> Brass<br />
+                                    <input type="radio" name="Wire" value="Phosphor Bronze" /> Phosphor Bronze<br />
+                                    <input type="radio" name="Wire" value="Stainless Steel" /> Stainless Steel<br />
+                                    <input type="radio" name="Wire" value="Other" /> Other:
+                                    <input type="text" name="Wire" value="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="container" id="div_hook" style="display: none; font-size: small">
+                            <hr style="border-bottom:double;" />
+                            <div class="row">
+                                <div class="col-md-1">
+                                </div>
+                                <div class="col-md-10">
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align : center;">
+                                                <div style="margin:auto">
+                                                    <img src="" width="123" height="68" />
+                                                </div>
+                                                <div style="height: 3em;">
+                                                    <input type="radio" name="HookType" Value="Hook Bolt, Right Angle Bend" /> Hook Bolt, Right Angle Bend
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-4">
+                                            <div class="thumbnail" style="text-align: center;">
+                                            <div style="margin:auto">
+                                                <img src="" width="123" height="68" />
+                                            </div>
+                                            <div style="height:3em;">
+                                                <input type="radio" name="HookType"
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </body>
