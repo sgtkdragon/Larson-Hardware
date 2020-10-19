@@ -1,10 +1,12 @@
 if(!jQuery)throw new Error("Bootstrap requires jQuery");
+
 +function(n){"use strict";
-function t(){var i=document.createElement("bootstrap"),t={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd otransitionend",transition:"transitionend"},n;
-for(n in t)if(void 0!==i.style[n])return{end:t[n]}}n.fn.emulateTransitionEnd=function(t){var i=!1,u=this,r;
-    n(this).one(n.support.transition.end,function(){i=!0});
-    return r=function(){i||n(u).trigger(n.support.transition.end)},setTimeout(r,t),this};
-    n(function(){n.support.transition=t()})}(window.jQuery);+function(n){"use strict";
+    function t(){var i=document.createElement("bootstrap"),t={WebkitTransition:"webkitTransitionEnd",MozTransition:"transitionend",OTransition:"oTransitionEnd otransitionend",transition:"transitionend"},n;
+    for(n in t)
+    if(void 0!==i.style[n])
+    return{end:t[n]}}n.fn.emulateTransitionEnd=function(t){var i=!1,u=this,r;n(this).one(n.support.transition.end,function(){i=!0});
+    return r=function(){i||n(u).trigger(n.support.transition.end)},setTimeout(r,t),this};n(function(){n.support.transition=t()})}
+(window.jQuery);+function(n){"use strict";
     var i='[data-dismiss="alert"]',t=function(t){n(t).on("click",i,this.close)},r;
     t.prototype.close=function(t){function f(){i.trigger("closed.bs.alert").remove()}var u=n(this),r=u.attr("data-target"),i;
     r||(r=u.attr("href"),r=r&&r.replace(/.*(?=#[^\s]*$)/,""));
